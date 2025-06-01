@@ -1,64 +1,55 @@
-import random
+import random #untuk
 import json
 import nltk
-nltk.download('omw-1.4')
+import os
+import joblib
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
+# Unduh NLTK data jika belum penah download
 nltk.download('punkt')
 nltk.download('wordnet')
+nltk.download('omw-1.4')
 
 # Inisialisasi
 lemmatizer = WordNetLemmatizer()
 
-# Dataset sederhana intents
-intents = {
-    "intents": [
-        {
-            "tag": "greeting",
-            "patterns": ["Hai", "Halo", "Apa kabar?", "Selamat pagi", "Hai bot"],
-            "responses": ["Halo! Ada yang bisa saya bantu seputar hidup sehat?", "Hai! Siap membantu kamu hidup lebih sehat!"]
-        },
-        {
-            "tag": "gizi",
-            "patterns": ["Apa itu gizi seimbang?", "Gizi yang baik itu seperti apa?", "Ciri makanan bergizi?"],
-            "responses": ["Gizi seimbang adalah asupan nutrisi lengkap yang dibutuhkan tubuh, termasuk karbohidrat, protein, lemak sehat, vitamin dan mineral."]
-        },
-        {
-            "tag": "hidup_sehat",
-            "patterns": ["Tips hidup sehat dong", "Gimana cara hidup sehat?", "Cara menjaga tubuh tetap sehat?"],
-            "responses": ["Minum cukup air, tidur teratur, olahraga minimal 3 kali seminggu, dan konsumsi makanan bergizi!"]
-        },
-        {
-            "tag": "olahraga",
-            "patterns": ["Olahraga yang baik apa?", "Berapa kali olahraga dalam seminggu?", "Saya ingin mulai olahraga"],
-            "responses": ["Untuk pemula, kamu bisa mulai dengan jalan kaki 30 menit sehari, 3–5 kali seminggu."]
-        },
-        {
-            "tag": "makan",
-            "patterns": ["Makanan sehat apa aja?", "Sarapan sehat itu seperti apa?", "Contoh makan siang bergizi?"],
-            "responses": ["Contoh makan sehat: nasi merah, dada ayam kukus, sayur rebus, dan buah sebagai pencuci mulut."]
-        }
-    ]
-}
+# Load dataset dari file
+with open("Dataset.json", "r", encoding="utf-8") as file:
+    intents = json.load(file)
 
-# Data persiapan
-all_patterns = []
-all_tags = []
+# Inisialisasi variabel global
+vectorizer_file = "vectorizer.pkl"
+model_file = "model.pkl"
 
-for intent in intents['intents']:
-    for pattern in intent['patterns']:
-        tokens = nltk.word_tokenize(pattern.lower())
-        stemmed = [lemmatizer.lemmatize(word) for word in tokens]
-        all_patterns.append(" ".join(stemmed))
-        all_tags.append(intent['tag'])
+# Cek apakah model sudah ada
+if os.path.exists(model_file) and os.path.exists(vectorizer_file):
+    # Load dari file
+    vectorizer = joblib.load(vectorizer_file)
+    clf = joblib.load(model_file)
 
-# Vektorisasi & klasifikasi
-vectorizer = CountVectorizer()
-X = vectorizer.fit_transform(all_patterns)
-clf = MultinomialNB()
-clf.fit(X, all_tags)
+#Jika model belum dibuat
+else:
+    # Melakukan training dengan data dari dataset
+    all_patterns = []
+    all_tags = []
+    for intent in intents['intents']:
+        for pattern in intent['patterns']:
+            tokens = nltk.word_tokenize(pattern.lower())
+            stemmed = [lemmatizer.lemmatize(word) for word in tokens]
+            all_patterns.append(" ".join(stemmed))
+            all_tags.append(intent['tag'])
+
+    # Vektorisasi dan training model
+    vectorizer = CountVectorizer()
+    X = vectorizer.fit_transform(all_patterns)
+    clf = MultinomialNB()
+    clf.fit(X, all_tags)
+
+    # Menyimpan model dan vectorizer ke file
+    joblib.dump(vectorizer, vectorizer_file)
+    joblib.dump(clf, model_file)
 
 # Fungsi chatbot
 def chatbot_response(user_input):
@@ -72,12 +63,20 @@ def chatbot_response(user_input):
             return random.choice(intent['responses'])
     return "Maaf, saya belum mengerti. Bisa coba tanyakan dengan cara berbeda?"
 
-# Interaksi CLI
+# CLI chatbot
 if __name__ == "__main__":
     print("Bot Sehat: Halo! Saya bisa bantu soal hidup sehat dan gizi. Ketik 'quit' untuk keluar.")
+    
+    # Tampilkan daftar tag
+    print("\nTopik yang bisa kamu tanyakan:")
+    for intent in intents['intents']:
+        print(f"- {intent['tag']}")
+    print()
+
+    # Loop interaksi
     while True:
         inp = input("Kamu: ")
-        if inp.lower() == "quit":
+        if inp.lower() in ["quit","q","qu"]:
             print("Bot Sehat: Sampai jumpa dan tetap sehat!")
             break
         response = chatbot_response(inp)

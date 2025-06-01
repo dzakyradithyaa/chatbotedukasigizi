@@ -1,0 +1,347 @@
+{
+  "intents": [
+    {
+      "tag": "gizi",
+      "patterns": [
+        "Apa itu gizi seimbang?",
+        "Gizi yang baik itu seperti apa?",
+        "Ciri makanan bergizi?",
+        "Kenapa penting makan bergizi?",
+        "Makanan 4 sehat 5 sempurna itu apa?",
+        "Apa manfaat makan bergizi?"
+      ],
+      "responses": [
+        "Gizi seimbang adalah asupan nutrisi lengkap yang dibutuhkan tubuh, termasuk karbohidrat, protein, lemak sehat, vitamin dan mineral."
+      ]
+    },
+    {
+      "tag": "hidup_sehat",
+      "patterns": [
+        "Tips hidup sehat dong",
+        "Gimana cara hidup sehat?",
+        "Cara menjaga tubuh tetap sehat?",
+        "Biar nggak gampang sakit gimana?",
+        "Cara hidup sehat alami?",
+        "Apa saja kebiasaan sehat?"
+      ],
+      "responses": [
+        "Minum cukup air, tidur teratur, olahraga minimal 3 kali seminggu, dan konsumsi makanan bergizi!"
+      ]
+    },
+    {
+      "tag": "olahraga",
+      "patterns": [
+        "Olahraga yang baik apa?",
+        "Berapa kali olahraga dalam seminggu?",
+        "Saya ingin mulai olahraga",
+        "Olahraga untuk pemula?",
+        "Olahraga di rumah bisa?",
+        "Latihan fisik yang cocok untuk pemula?"
+      ],
+      "responses": [
+        "Untuk pemula, kamu bisa mulai dengan jalan kaki 30 menit sehari, 3–5 kali seminggu."
+      ]
+    },
+    {
+      "tag": "makan",
+      "patterns": [
+        "Makanan sehat apa aja?",
+        "Sarapan sehat itu seperti apa?",
+        "Contoh makan siang bergizi?",
+        "Makanan apa yang harus dihindari?",
+        "Apa yang sebaiknya dimakan saat malam?",
+        "Cemilan sehat ada nggak?"
+      ],
+      "responses": [
+        "Contoh makan sehat: nasi merah, dada ayam kukus, sayur rebus, dan buah sebagai pencuci mulut."
+      ]
+    },
+    {
+      "tag": "tidur",
+      "patterns": [
+        "Berapa lama waktu tidur ideal?",
+        "Gimana cara tidur nyenyak?",
+        "Apakah penting tidur cukup?",
+        "Saya sering begadang, bahaya gak?",
+        "Tidur siang boleh gak?",
+        "Efek kurang tidur itu apa?"
+      ],
+      "responses": [
+        "Tidur ideal untuk dewasa adalah 7-9 jam per malam. Kurang tidur bisa menurunkan imun dan konsentrasi."
+      ]
+    },
+    {
+      "tag": "stress",
+      "patterns": [
+        "Gimana cara mengelola stres?",
+        "Saya sering cemas, solusinya?",
+        "Cara menenangkan pikiran?",
+        "Apa olahraga bisa mengurangi stres?",
+        "Tips anti stres dong",
+        "Saya stres karena kerjaan"
+      ],
+      "responses": [
+        "Coba tarik napas dalam-dalam, olahraga ringan, cukup tidur, dan bercerita ke orang terpercaya."
+      ]
+    },
+    {
+      "tag": "air_putih",
+      "patterns": [
+        "Berapa banyak air putih per hari?",
+        "Kenapa harus minum banyak air?",
+        "Minum air putih itu penting?",
+        "Saya jarang minum, berbahaya gak?",
+        "Minuman sehat apa saja?",
+        "Apa efek kekurangan air?"
+      ],
+      "responses": [
+        "Disarankan minum 8 gelas atau sekitar 2 liter air putih per hari untuk menjaga hidrasi tubuh."
+      ]
+    },
+    {
+      "tag": "berat_badan",
+      "patterns": [
+        "Cara menurunkan berat badan?",
+        "Saya mau diet sehat",
+        "Tips diet sehat ada?",
+        "Bagaimana cara menaikkan berat badan?",
+        "Pola makan untuk diet?",
+        "Cara diet alami gimana?"
+      ],
+      "responses": [
+        "Untuk menurunkan berat badan, atur kalori masuk dan rutin olahraga. Hindari diet ekstrem."
+      ]
+    },
+    {
+      "tag": "imun",
+      "patterns": [
+        "Gimana cara meningkatkan imun?",
+        "Apa makanan penambah imun?",
+        "Saya gampang sakit, kenapa ya?",
+        "Vitamin apa yang bagus untuk imun?",
+        "Apakah tidur cukup bisa meningkatkan imun?",
+        "Olahraga bisa bantu imun?"
+      ],
+      "responses": [
+        "Konsumsi buah dan sayur, cukup tidur, hindari stres, dan olahraga teratur bisa bantu tingkatkan imun."
+      ]
+    },
+    {
+      "tag": "sarapan",
+      "patterns": [
+        "Menu sarapan sehat apa?",
+        "Sarapan yang baik untuk diet?",
+        "Contoh sarapan bergizi dong"
+      ],
+      "responses": [
+        "Sarapan sehat bisa berupa oatmeal dengan buah, telur rebus, atau roti gandum dan alpukat."
+      ]
+    },
+    {
+      "tag": "makan_malam",
+      "patterns": [
+        "Makan malam sehat itu apa?",
+        "Boleh makan malam gak sih?",
+        "Gimana biar makan malam gak bikin gemuk?"
+      ],
+      "responses": [
+        "Pilih makanan ringan dan rendah kalori seperti sup bening, sayur, atau salad buah."
+      ]
+    },
+    {
+      "tag": "cemilan",
+      "patterns": [
+        "Cemilan sehat apa aja?",
+        "Saya suka ngemil, tapi pengen tetap sehat",
+        "Rekomendasi camilan sehat dong"
+      ],
+      "responses": [
+        "Coba buah potong, kacang-kacangan tanpa garam, yoghurt tanpa gula, atau edamame rebus."
+      ]
+    },
+    {
+      "tag": "buah",
+      "patterns": [
+        "Buah apa yang bagus untuk kesehatan?",
+        "Berapa porsi buah ideal per hari?",
+        "Buah untuk diet apa ya?"
+      ],
+      "responses": [
+        "Buah kaya serat dan antioksidan seperti apel, pisang, jeruk, dan berry sangat baik untuk tubuh."
+      ]
+    },
+    {
+      "tag": "sayur",
+      "patterns": [
+        "Sayuran sehat itu apa saja?",
+        "Harus makan sayur tiap hari?",
+        "Sayur terbaik untuk tubuh?"
+      ],
+      "responses": [
+        "Sayur hijau seperti bayam, brokoli, dan kangkung sangat baik untuk kesehatan."
+      ]
+    },
+    {
+      "tag": "vitamin",
+      "patterns": [
+        "Vitamin apa yang penting?",
+        "Butuh suplemen gak sih?",
+        "Sumber vitamin alami dari mana?"
+      ],
+      "responses": [
+        "Vitamin A, B, C, D, dan E penting. Sumbernya dari makanan alami seperti buah, sayur, dan biji-bijian."
+      ]
+    },
+    {
+      "tag": "mental_health",
+      "patterns": [
+        "Gimana jaga kesehatan mental?",
+        "Saya sering merasa cemas",
+        "Tips jaga pikiran tetap tenang"
+      ],
+      "responses": [
+        "Meditasi, tidur cukup, olahraga, dan bercerita dengan orang terdekat bisa membantu."
+      ]
+    },
+    {
+      "tag": "detoks",
+      "patterns": [
+        "Perlu detox gak sih?",
+        "Cara detoks alami gimana?",
+        "Apa itu detox tubuh?"
+      ],
+      "responses": [
+        "Tubuh kita sebenarnya sudah punya sistem detoks. Cukup konsumsi air putih dan makanan alami."
+      ]
+    },
+    {
+      "tag": "karbohidrat",
+      "patterns": [
+        "Karbohidrat sehat itu apa?",
+        "Apakah karbo bikin gemuk?",
+        "Nasi putih boleh gak?"
+      ],
+      "responses": [
+        "Pilih karbohidrat kompleks seperti nasi merah, kentang, oat, dan quinoa."
+      ]
+    },
+    {
+      "tag": "protein",
+      "patterns": [
+        "Makanan tinggi protein apa aja?",
+        "Protein penting gak sih?",
+        "Sumber protein nabati apa?"
+      ],
+      "responses": [
+        "Daging tanpa lemak, telur, tahu, tempe, dan kacang-kacangan adalah sumber protein yang baik."
+      ]
+    },
+    {
+      "tag": "lemak",
+      "patterns": [
+        "Lemak itu jahat ya?",
+        "Apa itu lemak sehat?",
+        "Contoh makanan berlemak baik?"
+      ],
+      "responses": [
+        "Lemak sehat seperti dari alpukat, kacang-kacangan, dan ikan laut dalam penting untuk tubuh."
+      ]
+    },
+    {
+      "tag": "karantina",
+      "patterns": [
+        "Saya di rumah aja, gimana tetap sehat?",
+        "Tips hidup sehat saat WFH?",
+        "Karantina bikin stres"
+      ],
+      "responses": [
+        "Tetap olahraga ringan di rumah, atur jam makan, dan luangkan waktu untuk relaksasi."
+      ]
+    },
+    {
+      "tag": "anak_sehat",
+      "patterns": [
+        "Anak saya susah makan sayur",
+        "Gimana kasih gizi seimbang ke anak?",
+        "Tips makanan sehat untuk anak"
+      ],
+      "responses": [
+        "Coba variasi makanan lucu, libatkan anak saat menyiapkan makanan, dan beri contoh yang baik."
+      ]
+    },
+    {
+      "tag": "lansia",
+      "patterns": [
+        "Makanan sehat untuk lansia?",
+        "Tips hidup sehat usia lanjut?",
+        "Gizi apa penting untuk orang tua?"
+      ],
+      "responses": [
+        "Pastikan konsumsi kalsium, vitamin D, dan makanan mudah cerna seperti bubur, sup, dan buah lunak."
+      ]
+    },
+    {
+      "tag": "puasa",
+      "patterns": [
+        "Tips sehat saat puasa",
+        "Boleh olahraga pas puasa?",
+        "Menu sahur sehat itu apa?"
+      ],
+      "responses": [
+        "Makan sahur bergizi, hindari gorengan saat buka, dan tetap minum cukup air saat malam."
+      ]
+    },
+    {
+      "tag": "berhenti_merokok",
+      "patterns": [
+        "Saya ingin berhenti merokok",
+        "Cara stop merokok?",
+        "Efek berhenti merokok apa?"
+      ],
+      "responses": [
+        "Berhenti merokok bisa tingkatkan kesehatan paru-paru, jantung, dan kualitas hidup secara keseluruhan."
+      ]
+    },
+    {
+      "tag": "minuman_sehat",
+      "patterns": [
+        "Minuman sehat selain air putih?",
+        "Teh hijau bagus gak?",
+        "Apa yang bagus untuk diminum pagi hari?"
+      ],
+      "responses": [
+        "Teh hijau, air lemon hangat, atau infused water bisa jadi pilihan minuman sehat."
+      ]
+    },
+    {
+      "tag": "diabetes",
+      "patterns": [
+        "Saya punya diabetes, harus makan apa?",
+        "Tips makan sehat untuk penderita gula",
+        "Diabetes boleh makan buah?"
+      ],
+      "responses": [
+        "Pilih makanan rendah gula dan tinggi serat. Konsultasikan dengan ahli gizi untuk rencana makan terbaik."
+      ]
+    },
+    {
+      "tag": "jantung",
+      "patterns": [
+        "Makanan sehat untuk jantung?",
+        "Gimana menjaga jantung tetap sehat?",
+        "Apa yang harus dihindari penderita jantung?"
+      ],
+      "responses": [
+        "Kurangi makanan tinggi lemak jenuh dan garam. Konsumsi ikan, buah, dan sayur untuk menjaga jantung."
+      ]
+    },
+    {
+      "tag": "greeting",
+      "patterns": ["Hai", "Halo", "Apa kabar?", "Selamat pagi", "Hai bot"],
+      "responses": [
+        "Halo! Ada yang bisa saya bantu seputar hidup sehat?",
+        "Hai! Siap membantu kamu hidup lebih sehat!"
+      ]
+    }
+  ]
+}
